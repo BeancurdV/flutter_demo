@@ -1,8 +1,5 @@
-import 'package:demo001/http/core/hi_net.dart';
-import 'package:demo001/http/request/test_request.dart';
+import 'package:demo001/practice/aaac_runtime_type.dart';
 import 'package:flutter/material.dart';
-
-import 'http/core/hi_error.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,19 +59,26 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() async {
-    try {
-      TestRequest request = TestRequest();
-      request.add('name', 'beancurdv').add('age', 19);
-      var result = await HiNet.getInstance().fire(request);
-      print(result);
-    } on NeedLogin catch (e) {
-      print(e);
-    } on NeedAuth catch (e) {
-      print(e);
-    } catch (e) {
-      print(e);
-    }
-    print('hell world  ,beancurdv');
+    // try {
+    //   TestRequest request = TestRequest();
+    //   request.add('name', 'beancurdv').add('age', 19);
+    //   var result = await HiNet.getInstance().fire(request);
+    //   print(result);
+    // } on NeedLogin catch (e) {
+    //   print(e);
+    // } on NeedAuth catch (e) {
+    //   print(e);
+    // } catch (e) {
+    //   print(e);
+    // }
+    // print('hell world  ,beancurdv');
+
+    // LateWork.test();
+
+    // ConstructorTest.testForConstructor();
+    // ConstructorTest.testImmutablePoint();
+
+    RuntimeType.testRuntimeType();
   }
 
   @override
