@@ -34,4 +34,7 @@ samples, guidance on mobile development, and a full API reference.
 2. 协程
     a. Future 使用。
     b. Future 一些操作符。
+3. 类与构造函数
+    a. 必传参数、 以及实参列表中的{} 的含义等
 ## 二、项目架构设计类
+
