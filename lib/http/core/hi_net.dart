@@ -29,7 +29,9 @@ class HiNet {
 
   Future fire(BaseRequest request) async {
     var response = await send(request);
+    // caice ： 这里开始一个Adapter类，桥接出去
     var result = response['data'];
+    // caice : 统一异常处理
     print(result);
     return result;
   }
