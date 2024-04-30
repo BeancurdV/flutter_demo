@@ -52,4 +52,5 @@ d. 升级版 json_serializable + 插件 ： https://zhuanlan.zhihu.com/p/5167913
 
 ## 三、常用的库
 1. json 使用的是 Dart:convert库， 利用 jsonDecode or jsonEncode
+2. http 冲突解决。
 
