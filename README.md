@@ -37,4 +37,19 @@ samples, guidance on mobile development, and a full API reference.
 3. 类与构造函数
     a. 必传参数、 以及实参列表中的{} 的含义等
 ## 二、项目架构设计类
+1. Flutter中是否有GSON、Jackson、FastJson ？
+2. 是否需要使用Model ， 要不要直接使用MAP？
+三种序列化方式：
+a. 手写实体类
+b. 网页自动生成实体类 (https://www.devio.org/io/tools/json-to-dart)
+c. json_serializable (json_annotation: ^4.9.0)
+    ```dart
+    dart run build_runner build  //在项目根目录下运行
+    ```
+d. 升级版 json_serializable + 插件 ： https://zhuanlan.zhihu.com/p/516791306
+
+看一下这三个库，都能够做什么。
+
+## 三、常用的库
+1. json 使用的是 Dart:convert库， 利用 jsonDecode or jsonEncode
 
