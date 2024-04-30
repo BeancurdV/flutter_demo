@@ -1,5 +1,10 @@
 import 'package:demo001/http/request/base_request.dart';
 
+/**
+ * TODO
+ *  1. Dart 异步设施：
+ *    Future 、 Async  Await的概念
+ */
 class HiNet {
   HiNet._();
 
@@ -29,7 +34,7 @@ class HiNet {
     return result;
   }
 
-  void printLog(log:String) {
-    print('hi_net':${log.toString()});
+  void printLog(log) {
+    print('hi_net:${log.toString()}');
   }
 }

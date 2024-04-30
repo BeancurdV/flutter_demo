@@ -32,9 +32,9 @@ abstract class BaseRequest {
     }
 
     if (useHttps) {
-      uri = Uri.https(authority(), pathStr, pathParams);
+      uri = Uri.https(authority(), pathStr, params);
     } else {
-      uri = Uri.http(authority(), pathStr, pathParams);
+      uri = Uri.http(authority(), pathStr, params);
     }
     return uri.toString();
   }
