@@ -1,4 +1,5 @@
 import 'package:demo001/practice/aaac_runtime_type.dart';
+import 'package:demo001/util/color.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        primaryColor: white,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
