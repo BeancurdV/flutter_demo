@@ -14,3 +14,24 @@ class Vector {
   @override
   int get hashCode => x.toInt() | y.toInt();
 }
+
+class Rectangle {
+  int left;
+  int width;
+  int top;
+  int height;
+
+  Rectangle(this.left, this.top, this.width, this.height);
+
+  int get right => left + width;
+
+  set right(int right) {
+    left = right - width;
+  }
+
+  int get bottom => top + height;
+
+  set bottom(int bottom) {
+    top = bottom - height;
+  }
+}
