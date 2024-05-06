@@ -1,3 +1,6 @@
+import 'package:demo001/constants/Constants.dart';
+import 'package:demo001/http/dao/login_dao.dart';
+
 enum HttpMethod { GET, POST, DELTE }
 
 /**
@@ -29,6 +32,10 @@ abstract class BaseRequest {
       } else {
         pathStr = "${path()}/$pathParams";
       }
+    }
+
+    if (needLogin()) {
+      addHeader(Constants.KEY_TOKEN, LoginDao.getToken());
     }
 
     if (useHttps) {

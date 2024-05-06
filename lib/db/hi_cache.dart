@@ -16,9 +16,7 @@ class HiCache {
   }
 
   void init() async {
-    if (preferences == null) {
-      preferences = await SharedPreferences.getInstance();
-    }
+    preferences ??= await SharedPreferences.getInstance();
   }
 
   HiCache._pre(SharedPreferences prefs) {
