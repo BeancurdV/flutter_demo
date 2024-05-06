@@ -1,6 +1,7 @@
 class DartPoint {
   int x;
   int y;
+
   DartPoint(this.x, this.y);
 
   static DartPoint fromJson(Map<String, dynamic> json) {
@@ -45,6 +46,7 @@ class ConstructorTest {
 class ConstructorPerson {
   int x = 0;
   int y = 0;
+
   ConstructorPerson(int xx, int yy) {
     x = xx;
     y = yy;
@@ -53,6 +55,7 @@ class ConstructorPerson {
 
 class Living {
   String? name;
+
   Living(String? name) {
     this.name = name;
   }
@@ -61,4 +64,16 @@ class Living {
 class ConstructorDog extends Living {
   int age;
   ConstructorDog(super.name, this.age);
+}
+
+class NameConstruct {
+  String name;
+
+  NameConstruct(this.name);
+
+  NameConstruct.n() : this('');
+}
+
+class NameConstructV2 extends Living {
+  NameConstructV2.n() : super('');
 }
