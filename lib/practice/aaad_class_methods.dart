@@ -35,3 +35,9 @@ class Rectangle {
     top = bottom - height;
   }
 }
+
+// main() {
+//   Rectangle rect = Rectangle(0, 0, 10, 10);
+//   rect.bottom = 1;
+//   rect.right = 2;
+// }
