@@ -63,6 +63,7 @@ class Living {
 
 class ConstructorDog extends Living {
   int age;
+
   ConstructorDog(super.name, this.age);
 }
 
@@ -76,4 +77,16 @@ class NameConstruct {
 
 class NameConstructV2 extends Living {
   NameConstructV2.n() : super('');
+}
+
+class InitialConstruct {
+  int x;
+  int y;
+  int z;
+
+  // 默认参数列表
+  InitialConstruct(this.x, {this.y = 0}) : z = 0;
+
+  // 构造函数重定向
+  InitialConstruct.y(int y) : this(0, y: y);
 }
