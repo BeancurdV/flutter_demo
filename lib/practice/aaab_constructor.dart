@@ -90,3 +90,16 @@ class InitialConstruct {
   // 构造函数重定向
   InitialConstruct.y(int y) : this(0, y: y);
 }
+
+class ConstantsConstruct {
+  final int _x;
+  final int _y;
+
+  const ConstantsConstruct(this._x, this._y);
+
+  static const orginal = ConstantsConstruct(0, 0);
+}
+
+// main() {
+//   ConstantsConstruct.orginal;
+// }
