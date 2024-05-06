@@ -61,3 +61,6 @@ d. 升级版 json_serializable + 插件 ： https://zhuanlan.zhihu.com/p/5167913
 1. json 使用的是 Dart:convert库， 利用 jsonDecode or jsonEncode
 2. http 冲突解决。
 
+
+## 四、接口
+1. 登录、退出、注册接口

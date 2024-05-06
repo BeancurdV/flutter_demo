@@ -41,3 +41,24 @@ class ConstructorTest {
     assert(identical(p, w)); // false
   }
 }
+
+class ConstructorPerson {
+  int x = 0;
+  int y = 0;
+  ConstructorPerson(int xx, int yy) {
+    x = xx;
+    y = yy;
+  }
+}
+
+class Living {
+  String? name;
+  Living(String? name) {
+    this.name = name;
+  }
+}
+
+class ConstructorDog extends Living {
+  int age;
+  ConstructorDog(super.name, this.age);
+}
