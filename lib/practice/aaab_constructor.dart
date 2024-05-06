@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 class DartPoint {
   int x;
   int y;
@@ -103,3 +105,26 @@ class ConstantsConstruct {
 // main() {
 //   ConstantsConstruct.orginal;
 // }
+
+class FactoryLoggerConstruct {
+  final String name;
+  bool mute = false;
+
+  FactoryLoggerConstruct._internal(this.name);
+
+  static final Map<String, FactoryLoggerConstruct> _cache = HashMap();
+
+  factory FactoryLoggerConstruct(String name) {
+    // 工厂构造 不能访问this
+    return _cache.putIfAbsent(
+        name, () => FactoryLoggerConstruct._internal(name));
+  }
+
+  factory FactoryLoggerConstruct.fromJson(Map<String, Object> json) {
+    return FactoryLoggerConstruct(json['name'].toString());
+  }
+
+  void log(String msg) {
+    if (!mute) print(msg);
+  }
+}
